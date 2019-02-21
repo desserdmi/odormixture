@@ -48,10 +48,15 @@ for key, value in groups.items():
         contrast_1 = ['D', 'T', [u'D', u'OFF'], [1, -1]]
         contrast_2 = ['C>D', 'T', [u'C', u'D'], [1, -1]]
         contrast_3 = ['C>D', 'T', [u'C', u'D'], [-1, 1]]
-        contrasts = [contrast_0, contrast_1, contrast_2, contrast_3]
+        contrast_4 = ['C>D_vs_OFF', 'T', [u'C', u'D', u'OFF'], [1, 0, -1]]
+        contrast_5 = ['C>D_vs_OFF', 'T', [u'D', u'C', u'OFF'], [1, 0, -1]]
+        contrast_6 = ['C_superior', 'T', [u'C', u'D', u'OFF'], [1, -0.5, -0.5]]
+        contrast_7 = ['D_superior', 'T', [u'C', u'D', u'OFF'], [-0.5, 1, -0.5]]
+        contrast_8 = ['C_plus_D', 'T', [u'C', u'D', u'OFF'], [0.5, 0.5, -1]]
+        contrasts = [contrast_0, contrast_1, contrast_2, contrast_3, contrast_4, contrast_5, contrast_6, contrast_7, contrast_8]
 
         output_dir = os.path.abspath('../data/derivatives/SPM')
-        working_dir = os.path.abspath('../data/derivatives/SPM/workdir')
+        working_dir = os.path.abspath('../data/derivatives/SPM/workdir_CD')
         preproc_dir = os.path.abspath('preproc')
 
         import pandas as pd

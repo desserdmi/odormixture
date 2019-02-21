@@ -47,10 +47,15 @@ for key, value in groups.items():
 
 
         contrast_0 = ['A', 'T', [u'A', u'OFF'], [1, -1]]
-        contrast_1 = ['B', 'T', [u'A', u'OFF'], [1, -1]]
+        contrast_1 = ['B', 'T', [u'B', u'OFF'], [1, -1]]
         contrast_2 = ['A>B', 'T', [u'A', u'B'], [1, -1]]
         contrast_3 = ['B>A', 'T', [u'A', u'B'], [-1, 1]]
-        contrasts = [contrast_0, contrast_1, contrast_2, contrast_3]
+        contrast_4 = ['A>B_vs_OFF', 'T', [u'A', u'B', u'OFF'], [1, 0, -1]]
+        contrast_5 = ['A>B_vs_OFF', 'T', [u'B', u'A', u'OFF'], [1, 0, -1]]
+        contrast_6 = ['A_superior', 'T', [u'A', u'B', u'OFF'], [1, -0.5, -0.5]]
+        contrast_7 = ['B_superior', 'T', [u'A', u'B', u'OFF'], [-0.5, 1, -0.5]]
+        contrast_8 = ['A_plus_B', 'T', [u'A', u'B', u'OFF'], [0.5, 0.5, -1]]
+        contrasts = [contrast_0, contrast_1, contrast_2, contrast_3, contrast_4, contrast_5, contrast_6, contrast_7, contrast_8]
 
         output_dir = os.path.abspath('../data/derivatives/SPM')
         working_dir = os.path.abspath('../data/derivatives/SPM/workdir')

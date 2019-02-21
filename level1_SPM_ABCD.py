@@ -46,7 +46,12 @@ for subject_id, runs in groups.items():
         contrast_1 = ['CD', 'T', [u'CD', u'OFF'], [1, -1]]
         contrast_2 = ['AB>CD', 'T', [u'AB', u'CD'], [1, -1]]
         contrast_3 = ['CD>AB', 'T', [u'AB', u'CD'], [-1, 1]]
-        contrasts = [contrast_0, contrast_1, contrast_2, contrast_3]
+        contrast_4 = ['AB>CD_vs_OFF', 'T', [u'AB', u'CD', u'OFF'], [1, 0, -1]]
+        contrast_5 = ['AB>CD_vs_OFF', 'T', [u'CD', u'AB', u'OFF'], [1, 0, -1]]
+        contrast_6 = ['AB_superior', 'T', [u'AB', u'CD', u'OFF'], [1, -0.5, -0.5]]
+        contrast_7 = ['CD_superior', 'T', [u'AB', u'CD', u'OFF'], [-0.5, 1, -0.5]]
+        contrast_8 = ['AB_plus_CD', 'T', [u'AB', u'CD', u'OFF'], [0.5, 0.5, -1]]
+        contrasts = [contrast_0, contrast_1, contrast_2, contrast_3, contrast_4, contrast_5, contrast_6, contrast_7, contrast_8]
 
         output_dir = os.path.abspath('../data/derivatives/SPM')
         working_dir = os.path.abspath('../data/derivatives/SPM/workdir')
